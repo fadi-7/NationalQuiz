@@ -7,7 +7,6 @@ import '../../app/my_app_controller.dart';
 import '../../core/data/repositories/shared_prefreance_repository.dart';
 import '../../core/enums/connectivity_status.dart';
 import '../../core/enums/message_type.dart';
-import '../../core/services/cart_serves.dart';
 import '../../core/services/connectivity_service.dart';
 import '../../core/services/location_service.dart';
 import '../../core/services/notification_service.dart';
@@ -42,10 +41,9 @@ double screenHeight (double perecent){
 return Get.size.height/perecent;
 }
 
-SharedPrefranceRepository get storage => 
-Get.find<SharedPrefranceRepository>();
+SharedPrefranceRepository get storage => Get.find<SharedPrefranceRepository>();
 
-CartService get cartService => Get.find<CartService>();
+
 
 LocationService get locationService => Get.find<LocationService>();
 // NotificationService get notificationService => Get.find<NotificationService>();

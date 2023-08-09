@@ -1,10 +1,8 @@
 import 'dart:convert';
-import 'package:nationalquiz/core/data/models/apis/token_info.dart';
-import 'package:nationalquiz/core/enums/data_type.dart';
 import 'package:get/get.dart';
+import 'package:nationalquiz/core/enums/data_type.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../models/cart_model.dart';
 
 class SharedPrefranceRepository {
   SharedPreferences globalSharedPrefs = Get.find();
@@ -84,21 +82,8 @@ setSubStatus(bool value) {
    String PREF_TOKEN_INFO = 'token_info';
 
 
-   setTokenInfo(TokenInfo value) {
-    setPrefrance(
-      dataType: DataType.STRING,
-      key: PREF_TOKEN_INFO,
-      value: jsonEncode(value),
-    );
-  }
 
-   TokenInfo? getTokenInfo() {
-    if (globalSharedPrefs.containsKey(PREF_TOKEN_INFO)) {
-      return TokenInfo.fromJson(jsonDecode(getPrefrance(key: PREF_TOKEN_INFO)));
-    } else {
-      return null;
-    }
-  }
+   
 
    setAppLanguage(String value) {
     setPrefrance(
@@ -115,20 +100,9 @@ setSubStatus(bool value) {
       return 'ar';
     }
   }
-  void setCartList(List<CartModel> list) {
-    setPrefrance(
-        dataType: DataType.STRING,
-        key: PREF_CART_LIST,
-        value: CartModel.encode(list));
-  }
+  
 
-  List<CartModel> getCartList() {
-    if (globalSharedPrefs.containsKey(PREF_CART_LIST)) {
-      return CartModel.decode(getPrefrance(key: PREF_CART_LIST));
-    } else {
-      return [];
-    }
-  }
+ 
 
 
 

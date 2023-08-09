@@ -6,8 +6,6 @@ import 'package:nationalquiz/core/services/location_service.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'app/my_app_controller.dart';
-import 'core/data/repositories/shared_prefreance_repository.dart';
-import 'core/services/cart_serves.dart';
 import 'core/services/connectivity_service.dart';
 import 'core/services/notification_service.dart';
 
@@ -23,10 +21,8 @@ Future<void> main() async {
     },
   );
    
-  Get.put(SharedPrefranceRepository());
   Get.put(ConnectivityService());
   Get.put(LocationService() );
-  Get.put(CartService());
   Get.put(MyAppController());
     // Get.put(NotificationService());
 
