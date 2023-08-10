@@ -22,11 +22,11 @@ class CustomToast {
         break;
       case MessageType.WARNING:
         imageName = 'warning';
-        shadowColor = AppColors.mainOrangeColor;
+        shadowColor = AppColors.mainPurpleColor;
         break;
       case MessageType.REJECTED:
         imageName = 'rejected-01';
-        shadowColor = AppColors.mainRedColor;
+        shadowColor = AppColors.mainGreyColor;
         break;
       case MessageType.SUCCSESS:
         imageName = 'approved1-01';
@@ -37,7 +37,6 @@ class CustomToast {
     BotToast.showCustomText(
         duration: Duration(seconds: 5),
         toastBuilder: (value) {
-
           return Container(
             width: screenWidth(1),
             height: screenWidth(1),

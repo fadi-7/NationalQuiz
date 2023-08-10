@@ -6,26 +6,18 @@ import 'package:nationalquiz/core/enums/connectivity_status.dart';
 import 'package:nationalquiz/core/translation/app_translation.dart';
 import 'package:nationalquiz/ui/shared/utils.dart';
 import 'package:nationalquiz/ui/views/splash_screen/splash_screen_view.dart';
-
-
-
 import 'package:provider/provider.dart';
-
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});
-
-  
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return StreamProvider(
-   
         create: (context) =>
             connectivityService.connectivityStatusController.stream,
         initialData: ConnectivityStatus.ONLINE,
-      
         child: GetMaterialApp(
             defaultTransition: GetPlatform.isAndroid
                 ? Transition.fadeIn
@@ -38,7 +30,7 @@ class MyApp extends StatelessWidget {
             navigatorObservers: [BotToastNavigatorObserver()], //2
             debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
-            home: SplashScreenView() ));
+            home: SplashScreenView()));
   }
 }
 

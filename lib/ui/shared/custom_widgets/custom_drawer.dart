@@ -55,7 +55,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
           Text(
             text,
             style: TextStyle(
-              color: AppColors.mainTextColor,
+              color: AppColors.mainGreyColor,
             ),
           ),
         ],
