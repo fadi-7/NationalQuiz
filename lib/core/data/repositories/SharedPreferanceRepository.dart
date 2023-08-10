@@ -90,7 +90,7 @@ class SharedPreferanceRepository {
     if (globalSharedPrefs.containsKey(PREF_APP_LANG)) {
       return getPrefrance(key: PREF_APP_LANG);
     } else {
-      return 'ar';
+      return 'en';
     }
   }
 

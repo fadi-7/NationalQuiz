@@ -7,7 +7,14 @@
 // import '../login_view/login_view.dart';
 // import '../main_view/main_view.dart';
 
-// class splashScreenControlar extends BaseController {
+import 'package:flutter/cupertino.dart';
+import 'package:nationalquiz/core/services/base_controller.dart';
+
+class SplashScreenController extends BaseController {
+  TextEditingController emailController =
+      TextEditingController(text: 'Test@gmail.com');
+  TextEditingController passwordController =
+      TextEditingController(text: 'Test@1234');
 //   @override
 //   void onInit() {
 //     if (storage.getOrderPlaced()) {
@@ -25,6 +32,4 @@
 //     });
 //     super.onInit();
 //   }
-// }
-
-
+}
