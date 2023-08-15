@@ -1,37 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:nationalquiz/ui/shared/colors.dart';
 
-class Text_wedget extends StatelessWidget {
-  const Text_wedget(
-      {super.key,
-      required this.text,
-      this.textcolor = null,
-      this.fontsize = null,
-      this.fontWeight = null,
-      this.decoration = null,
-      this.decorationThickness = null,
-      this.fontFamily = null});
+class CustomText extends StatelessWidget {
+  const CustomText({
+    super.key,
+    required this.text,
+    this.textColor,
+    this.textSize,
+    this.fontWeight,
+  });
   final String text;
-  final Color? textcolor;
-  final double? fontsize;
+  final Color? textColor;
+  final double? textSize;
   final FontWeight? fontWeight;
-  final TextDecoration? decoration;
-  final double? decorationThickness;
-  final String? fontFamily;
-
-  
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Text(
-     
       text,
       style: TextStyle(
-        color: textcolor,
-        fontSize: fontsize,
-        fontWeight: fontWeight,
-        decoration: decoration,
-        decorationThickness: decorationThickness,
-      ),
+          fontSize: textSize ?? size.width * 0.035,
+          color: textColor ?? AppColors.mainPurpleColor,
+          fontWeight: fontWeight ?? FontWeight.normal),
     );
   }
 }

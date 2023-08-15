@@ -8,6 +8,9 @@ import 'package:nationalquiz/ui/shared/utils.dart';
 import 'package:nationalquiz/ui/views/splash_screen/splash_screen_view.dart';
 import 'package:provider/provider.dart';
 
+import '../ui/views/login_view/login_view.dart';
+import '../ui/views/signup/signup_view.dart';
+
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
@@ -30,7 +33,7 @@ class MyApp extends StatelessWidget {
             navigatorObservers: [BotToastNavigatorObserver()], //2
             debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
-            home: SplashScreenView()));
+            home: LoginView()));
   }
 }
 
