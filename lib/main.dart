@@ -2,7 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:nationalquiz/app/my_app.dart';
-import 'package:nationalquiz/core/data/repositories/SharedPreferanceRepository.dart';
+import 'package:nationalquiz/core/data/repositories/shared_prefreance_repository.dart';
 import 'package:nationalquiz/core/services/location_service.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -23,8 +23,7 @@ Future<void> main() async {
   Get.put(ConnectivityService());
   Get.put(LocationService());
   Get.put(MyAppController());
-  Get.put(SharedPreferanceRepository());
-
+  Get.put(SharedPrefranceRepository());
   // Get.put(NotificationService());
 
   // await Firebase.initializeApp(

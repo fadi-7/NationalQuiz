@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:nationalquiz/ui/shared/utils.dart';
 
 class Text_wedget extends StatelessWidget {
   const Text_wedget(
       {super.key,
       required this.text,
-      this.textcolor = null,
-      this.fontsize = null,
-      this.fontWeight = null,
-      this.decoration = null,
-      this.decorationThickness = null,
-      this.fontFamily = null});
+      this.textcolor,
+      this.fontsize ,
+      this.fontWeight ,
+      this.decoration ,
+      this.decorationThickness,
+      this.fontFamily});
   final String text;
   final Color? textcolor;
   final double? fontsize;
@@ -27,10 +28,11 @@ class Text_wedget extends StatelessWidget {
       text,
       style: TextStyle(
         color: textcolor,
-        fontSize: fontsize,
+        fontSize: fontsize??screenWidth(23),
         fontWeight: fontWeight,
         decoration: decoration,
         decorationThickness: decorationThickness,
+         
       ),
     );
   }
