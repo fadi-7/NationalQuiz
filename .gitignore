@@ -33,7 +33,10 @@ migrate_working_dir/
 /build/
 /android/
 /ios/
+<<<<<<< HEAD
 
+=======
+>>>>>>> 74acaad44e0a81bd441020da7bc66c9cb53a3831
 # Symbolication related
 app.*.symbols
 

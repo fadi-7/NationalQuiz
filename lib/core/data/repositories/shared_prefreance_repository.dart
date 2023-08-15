@@ -112,7 +112,7 @@ setSubStatus(bool value) {
     if (globalSharedPrefs.containsKey(PREF_APP_LANG)) {
       return getPrefrance(key: PREF_APP_LANG);
     } else {
-      return 'ar';
+      return 'en';
     }
   }
   void setCartList(List<CartModel> list) {
