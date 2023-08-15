@@ -2,9 +2,9 @@ import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
+import 'package:nationalquiz/core/data/repositories/shared_prefreance_repository.dart';
 
 import '../../app/my_app_controller.dart';
-import '../../core/data/repositories/SharedPreferanceRepository.dart';
 import '../../core/enums/connectivity_status.dart';
 import '../../core/enums/message_type.dart';
 import '../../core/services/connectivity_service.dart';
@@ -26,24 +26,28 @@ bool isPasswordValid(String value) {
   return regExp.hasMatch(value);
 }
 
-double screenWidth(double perecent) {
-  return Get.size.width / perecent;
+double screenWidth (double perecent){
+return Get.size.width/perecent;
 }
-
 ConnectivityService get connectivityService => Get.find<ConnectivityService>();
+
 
 bool get isOnline =>
     Get.find<MyAppController>().connectionStatus == ConnectivityStatus.ONLINE;
 
-double screenHeight(double perecent) {
-  return Get.size.height / perecent;
+
+
+double screenHeight (double perecent){
+return Get.size.height/perecent;
 }
 
-SharedPreferanceRepository get storage =>
-    Get.find<SharedPreferanceRepository>();
+SharedPrefranceRepository get storage => 
+Get.find<SharedPrefranceRepository>();
+
 
 LocationService get locationService => Get.find<LocationService>();
-// NotificationService get notificationService => Get.find<NotificationService>();
+NotificationService get notificationService => Get.find<NotificationService>();
+
 
 void fadeInTransition(Widget view) {
   Get.to(view, transition: Transition.fadeIn);
@@ -56,11 +60,11 @@ void customLoader() => BotToast.showCustomLoading(toastBuilder: (builder) {
         decoration: BoxDecoration(
             color: AppColors.mainBlackColor.withOpacity(0.5),
             borderRadius: BorderRadius.circular(15)),
-        child: SpinKitCircle(color: AppColors.mainPurpleColor),
+        child: SpinKitCircle(color: AppColors.mainWhiteColor),
       );
     });
-double get taxAmount => 0.18;
-double get deliveryAmount => 0.1;
+// double get taxAmount => 0.18;
+// double get deliveryAmount => 0.1;
 
 void checkConnection(Function function) {
   if (isOnline)
@@ -70,3 +74,4 @@ void checkConnection(Function function) {
         message: 'Please check internet connection',
         messageType: MessageType.WARNING);
 }
+

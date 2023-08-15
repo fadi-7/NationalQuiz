@@ -1,10 +1,13 @@
 import 'package:bot_toast/bot_toast.dart';
+import 'package:get/get.dart';
 import 'package:nationalquiz/core/enums/operation_type.dart';
 import 'package:nationalquiz/core/enums/request_status.dart';
-import 'package:get/get.dart';
 import '../../ui/shared/utils.dart';
+import '../data/repositories/user_repository.dart';
+import 'cart_serves.dart';
 
 class BaseController extends GetxController {
+  UserRepository userRepository = Get.put(UserRepository());
 
   Rx<RequestStatus> requestStatus = RequestStatus.DEFUALT.obs;
   RxList<OperationType> operationType = <OperationType>[].obs;

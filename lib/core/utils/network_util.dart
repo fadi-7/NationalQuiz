@@ -1,14 +1,14 @@
 import 'dart:convert';
 import 'package:bot_toast/bot_toast.dart';
-import 'package:nationalquiz/core/enums/request_type.dart';
 import 'package:http/http.dart' as http;
 import 'package:mime/mime.dart';
+import 'package:nationalquiz/core/enums/request_type.dart';
 import 'package:path/path.dart' as path;
 
 import 'package:http_parser/http_parser.dart';
 
 class NetworkUtil {
-  static String baseUrl = 'training.owner-tech.com';
+  static String baseUrl = 'b655-185-107-56-104.ngrok-free.app';
   static var client = http.Client();
 
   static Future<dynamic> sendRequest({
