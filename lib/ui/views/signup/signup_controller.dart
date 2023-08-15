@@ -5,7 +5,8 @@ import 'package:nationalquiz/core/enums/message_type.dart';
 import 'package:nationalquiz/core/services/base_controller.dart';
 import 'package:nationalquiz/ui/shared/custom_widgets/custom_toast.dart';
 import 'package:nationalquiz/ui/shared/utils.dart';
-import 'package:nationalquiz/ui/views/MainView.dart';
+
+import '../main/main_view.dart';
 
 class Signupcontroller extends BaseController {
   TextEditingController username = TextEditingController();

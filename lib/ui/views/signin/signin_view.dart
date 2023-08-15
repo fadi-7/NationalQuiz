@@ -1,18 +1,16 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:nationalquiz/ui/shared/custom_widgets/custom_button.dart';
-import 'package:nationalquiz/ui/shared/utils.dart';
-import 'package:nationalquiz/ui/views/main/main_view.dart';
 import 'package:nationalquiz/ui/views/signin/signin_controller.dart';
 
-import '../../../app/my_app.dart';
-import '../../../core/translation/app_translation.dart';
 import '../../shared/colors.dart';
 import '../../shared/custom_widgets/custom-text.dart';
+import '../../shared/custom_widgets/custom_button.dart';
 import '../../shared/custom_widgets/custom_text_field.dart';
 import '../../shared/custom_widgets/space_between.dart';
-import '../main/home_view.dart';
+import '../../shared/utils.dart';
+import '../main/main_view.dart';
 
 class SigninView extends StatefulWidget {
   const SigninView({super.key});
@@ -99,7 +97,7 @@ class _SigninViewState extends State<SigninView> {
               ),
               SpaceBetween(10),
               InkWell(
-                    onTap:(){ Get.to(()=> HomeView());},
+                    onTap:(){ Get.to(()=> MainView());},
                     child:Text_wedget(
                 text: "المتابعة كزائر",
                 textcolor: AppColors.thirdPurpleColor,
